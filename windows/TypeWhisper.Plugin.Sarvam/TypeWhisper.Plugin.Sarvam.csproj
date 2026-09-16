@@ -10,6 +10,7 @@
     <Authors>TalkXO</Authors>
     <Company>TalkXO</Company>
     <Description>Sarvam AI (Saaras) STT plugin for TypeWhisper Windows</Description>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
 
   <!-- If built inside typewhisper-win repository tree -->
