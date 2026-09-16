@@ -1,0 +1,66 @@
+name: Build Windows Plugin
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Clone TypeWhisper for Windows SDK
+        shell: pwsh
+        run: |
+          git clone --depth 1 https://github.com/TypeWhisper/typewhisper-win.git tw-win
+          Copy-Item -Recurse -Force windows/TypeWhisper.Plugin.Sarvam tw-win/plugins/TypeWhisper.Plugin.Sarvam
+
+      - name: Build Windows Plugin (.NET 10)
+        shell: pwsh
+        run: |
+          cd tw-win/plugins/TypeWhisper.Plugin.Sarvam
+          dotnet build TypeWhisper.Plugin.Sarvam.csproj -c Release -f net10.0-windows
+          if ($LASTEXITCODE -ne 0) { throw "Build failed" }
+
+      - name: Package Windows ZIP
+        shell: pwsh
+        run: |
+          $binDir = "tw-win/plugins/TypeWhisper.Plugin.Sarvam/bin/Release/net10.0-windows"
+          $stagingDir = "staging/com.typewhisper.sarvam"
+          New-Item -ItemType Directory -Path $stagingDir -Force | Out-Null
+
+          Copy-Item "$binDir/TypeWhisper.Plugin.Sarvam.dll" -Destination $stagingDir/
+          Copy-Item "windows/TypeWhisper.Plugin.Sarvam/manifest.json" -Destination $stagingDir/
+
+          Compress-Archive -Path "$stagingDir/*" -DestinationPath "SarvamPlugin-windows.zip" -Force
+          Write-Host "Created SarvamPlugin-windows.zip successfully"
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SarvamPlugin-windows
+          path: SarvamPlugin-windows.zip
+
+      - name: Attach to Release (if release exists)
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if (gh release view v1.0.1 2>$null) {
+            gh release upload v1.0.1 SarvamPlugin-windows.zip --clobber
+            Write-Host "Uploaded SarvamPlugin-windows.zip to release v1.0.1"
+          } else {
+            Write-Host "Release v1.0.1 not found; skipping release upload"
+          }
