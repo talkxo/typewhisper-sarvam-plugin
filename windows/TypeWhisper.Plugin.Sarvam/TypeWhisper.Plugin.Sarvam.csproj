@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net10.0-windows;net8.0-windows</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>TypeWhisper.Plugin.Sarvam</RootNamespace>
+    <AssemblyName>TypeWhisper.Plugin.Sarvam</AssemblyName>
+    <Authors>TalkXO</Authors>
+    <Company>TalkXO</Company>
+    <Description>Sarvam AI (Saaras) STT plugin for TypeWhisper Windows</Description>
+  </PropertyGroup>
+
+  <!-- If built inside typewhisper-win repository tree -->
+  <ItemGroup Condition="Exists('..\..\src\TypeWhisper.PluginSDK\TypeWhisper.PluginSDK.csproj')">
+    <ProjectReference Include="..\..\src\TypeWhisper.PluginSDK\TypeWhisper.PluginSDK.csproj" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="manifest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!-- Clean up host SDK from output if present -->
+  <Target Name="RemoveHostSdkFromPluginOutput" AfterTargets="Build">
+    <Delete Files="$(TargetDir)TypeWhisper.PluginSDK.dll;$(TargetDir)TypeWhisper.PluginSDK.pdb" Condition="Exists('$(TargetDir)TypeWhisper.PluginSDK.dll')" />
+  </Target>
+</Project>

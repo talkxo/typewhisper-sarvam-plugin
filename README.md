@@ -1,14 +1,21 @@
 # Sarvam AI (Saaras) Plugin for TypeWhisper 🇮🇳 🎙️
 
 [![macOS 14.0+](https://img.shields.io/badge/macOS-14.0%2B%20%28Sonoma%2FSequoia%29-blue?logo=apple)](https://apple.com)
+[![Windows 10/11](https://img.shields.io/badge/Windows-10%2F11%20%28.NET%208%2F10%29-blue?logo=windows)](https://github.com/TypeWhisper/typewhisper-win)
 [![Swift 5.9](https://img.shields.io/badge/Swift-5.9%2B-orange?logo=swift)](https://swift.org)
-[![TypeWhisper 1.6.0+](https://img.shields.io/badge/TypeWhisper-1.6.0%2B-purple)](https://typewhisper.com)
+[![C# 12](https://img.shields.io/badge/C%23-12%2B%20%28.NET%29-purple?logo=csharp)](https://dotnet.microsoft.com)
+[![TypeWhisper](https://img.shields.io/badge/TypeWhisper-Mac%20%26%20Windows-purple)](https://typewhisper.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Built by TalkXO](https://img.shields.io/badge/Crafted%20by-TalkXO-green)](https://hello.talkxo.com)
 
-Supercharge macOS voice dictation with **Indic languages**, **chat-style Hinglish transliteration**, and **real-time English translation** powered by [Sarvam AI](https://www.sarvam.ai)'s state-of-the-art **Saaras** speech models (`saaras:v4` and `saaras:v3`).
+Supercharge your voice dictation on **macOS** and **Windows** with **Indic languages**, **chat-style Hinglish transliteration**, and **real-time English translation** powered by [Sarvam AI](https://www.sarvam.ai)'s state-of-the-art **Saaras** speech models (`saaras:v4` and `saaras:v3`).
 
-Originally crafted by the team at [**TalkXO**](https://hello.talkxo.com) for internal team productivity, and shared freely as an open community enabler.
+Originally crafted by the team at [**TalkXO**](https://hello.talkxo.com) for internal team productivity across Mac and Windows, and shared freely as an open community enabler.
+
+| Operating System | TypeWhisper Version | Plugin Implementation | Plugin Location |
+| :--- | :--- | :--- | :--- |
+| 🍏 **macOS** | [TypeWhisper for Mac](https://github.com/TypeWhisper/typewhisper-mac) | Native Swift Bundle (`SarvamPlugin.bundle`) | `~/Library/Application Support/TypeWhisper/Plugins/` |
+| 🪟 **Windows** | [TypeWhisper for Windows](https://github.com/TypeWhisper/typewhisper-win) | Native .NET Library (`TypeWhisper.Plugin.Sarvam.dll`) | `%LocalAppData%\TypeWhisper\Plugins\com.typewhisper.sarvam\` |
 
 ---
 
@@ -54,14 +61,23 @@ You don't have to give up your default transcription engine! Using TypeWhisper *
 ## ⚡ Quick Start: Beginner Guide (2 Minutes)
 
 ### Step 1: Download & Install
-1. Download **`SarvamPlugin.zip`** from the [Releases](https://github.com/talkxo/typewhisper-sarvam-plugin/releases) section (or extract from this repo).
-2. Double-click `SarvamPlugin.zip` to extract **`SarvamPlugin.bundle`**.
-3. Move `SarvamPlugin.bundle` to your TypeWhisper plugins folder:
+
+#### 🍏 On macOS:
+1. Download **`SarvamPlugin.zip`** from [Releases](https://github.com/talkxo/typewhisper-sarvam-plugin/releases).
+2. Extract **`SarvamPlugin.bundle`** and move it to your TypeWhisper plugins folder:
    ```bash
    mkdir -p ~/Library/Application\ Support/TypeWhisper/Plugins
    cp -R SarvamPlugin.bundle ~/Library/Application\ Support/TypeWhisper/Plugins/
    ```
-4. **Restart TypeWhisper** (quit completely and reopen).
+3. Restart TypeWhisper for Mac.
+
+#### 🪟 On Windows:
+1. Download or compile **`TypeWhisper.Plugin.Sarvam.dll`** from the `windows/` folder.
+2. Create the plugin folder and place `TypeWhisper.Plugin.Sarvam.dll` and `manifest.json` inside:
+   ```cmd
+   %LocalAppData%\TypeWhisper\Plugins\com.typewhisper.sarvam\
+   ```
+3. Restart TypeWhisper for Windows.
 
 ---
 
