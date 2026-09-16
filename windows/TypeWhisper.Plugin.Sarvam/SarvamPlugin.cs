@@ -48,9 +48,9 @@ public sealed class SarvamPlugin : ITranscriptionEnginePlugin, ITypeWhisperPlugi
 
     public IReadOnlyList<PluginModelInfo> TranscriptionModels { get; } =
     [
-        new("saaras:v4", "Saaras v4 (Recommended - Latest transliteration)", "State-of-the-art multilingual speech model with Hinglish and 22+ Indic languages."),
-        new("saaras:v3", "Saaras v3 (Fast)", "High-speed Indic speech-to-text model."),
-        new("saaras:v2.5", "Saaras v2.5 (Legacy)", "Legacy speech recognition model.")
+        new("saaras:v4", "Saaras v4 (Recommended - Latest transliteration)") { IsRecommended = true, LanguageCount = 22 },
+        new("saaras:v3", "Saaras v3 (Fast)") { LanguageCount = 10 },
+        new("saaras:v2.5", "Saaras v2.5 (Legacy)")
     ];
 
     public IReadOnlyList<string> SupportedLanguages { get; } =
@@ -211,7 +211,7 @@ public sealed class SarvamPlugin : ITranscriptionEnginePlugin, ITypeWhisperPlugi
             detectedLang = langProp.GetString();
         }
 
-        return new PluginTranscriptionResult(transcript.Trim(), detectedLang, 0.0);
+        return new PluginTranscriptionResult(transcript.Trim(), detectedLang ?? "unknown", 0.0);
     }
 
     private string ResolveEffectiveLanguage(string? hostLanguage, string mode)
