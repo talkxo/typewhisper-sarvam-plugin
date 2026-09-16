@@ -72,11 +72,12 @@ You don't have to give up your default transcription engine! Using TypeWhisper *
 3. Restart TypeWhisper for Mac.
 
 #### 🪟 On Windows:
-1. Download or compile **`TypeWhisper.Plugin.Sarvam.dll`** from the `windows/` folder.
-2. Create the plugin folder and place `TypeWhisper.Plugin.Sarvam.dll` and `manifest.json` inside:
+1. Download **`SarvamPlugin-windows.zip`** from [Releases](https://github.com/talkxo/typewhisper-sarvam-plugin/releases).
+2. Extract the files into your TypeWhisper Windows plugin folder:
    ```cmd
    %LocalAppData%\TypeWhisper\Plugins\com.typewhisper.sarvam\
    ```
+   *(It contains `TypeWhisper.Plugin.Sarvam.dll` and `manifest.json`)*.
 3. Restart TypeWhisper for Windows.
 
 ---
