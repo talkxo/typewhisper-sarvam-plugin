@@ -1,0 +1,34 @@
+name: SarvamPlugin
+options:
+  bundleIdPrefix: com.typewhisper
+  deploymentTarget:
+    macOS: "14.0"
+
+packages:
+  TypeWhisperPluginSDK:
+    path: /Users/rishiraj/Downloads/typewhisper-mac/TypeWhisperPluginSDK
+
+targets:
+  SarvamPlugin:
+    type: bundle
+    platform: macOS
+    sources:
+      - path: Sources/SarvamPlugin
+      - path: Resources/manifest.json
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_NAME: SarvamPlugin
+        PRODUCT_BUNDLE_IDENTIFIER: com.typewhisper.sarvam
+        INFOPLIST_FILE: Resources/Info.plist
+        MACH_O_TYPE: mh_bundle
+        WRAPPER_EXTENSION: bundle
+        GENERATE_INFOPLIST_FILE: NO
+        CODE_SIGN_STYLE: Automatic
+        SWIFT_VERSION: "6.0"
+        SWIFT_STRICT_CONCURRENCY: complete
+    dependencies:
+      - package: TypeWhisperPluginSDK
+        product: TypeWhisperPluginSDK
+        embed: false
+        link: true

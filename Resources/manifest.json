@@ -1,0 +1,17 @@
+{
+    "id": "com.typewhisper.sarvam",
+    "name": "Sarvam AI (Saaras)",
+    "version": "1.0.1",
+    "minHostVersion": "1.6.0",
+    "sdkCompatibilityVersion": "v1",
+    "minOSVersion": "14.0",
+    "supportedArchitectures": ["arm64"],
+    "author": "TalkXO · Fast speech-to-text & Hinglish transliteration powered by Sarvam AI",
+    "description": "Speech-to-text, Hinglish transliteration, and Indic transcription powered by Sarvam AI's Saaras models. Built with ❤️ by TalkXO in India.",
+    "category": "transcription",
+    "hosting": "cloud",
+    "iconSystemName": "waveform.badge.mic",
+    "principalClass": "SarvamPlugin",
+    "requiresAPIKey": true,
+    "detailsURL": "https://hello.talkxo.com"
+}

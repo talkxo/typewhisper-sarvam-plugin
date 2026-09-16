@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E56655918D2F077B52F77A0 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F355D1BF2FFD2E5C8304E07 /* manifest.json */; };
+		99700EED4C8FAA0599F83190 /* TypeWhisperPluginSDK in Frameworks */ = {isa = PBXBuildFile; productRef = B602B9BF58829B9FE2411365 /* TypeWhisperPluginSDK */; };
+		E007F1D3A0481190EDFE3CAA /* SarvamPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B0CFC077AEE4CFC8C57482 /* SarvamPlugin.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F355D1BF2FFD2E5C8304E07 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		7D7A95AB30FB822EDCF5012E /* SarvamPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SarvamPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		80C5E30D9EF4201AB48C9682 /* TypeWhisperPluginSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TypeWhisperPluginSDK; path = "../../../../Downloads/typewhisper-mac/TypeWhisperPluginSDK"; sourceTree = SOURCE_ROOT; };
+		D5B0CFC077AEE4CFC8C57482 /* SarvamPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SarvamPlugin.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7E04741474C3995B2C60BB60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99700EED4C8FAA0599F83190 /* TypeWhisperPluginSDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A3855148777F405CB21148B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D7A95AB30FB822EDCF5012E /* SarvamPlugin.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A48494D6562390297F00CA37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F355D1BF2FFD2E5C8304E07 /* manifest.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E22ECFC1C0A6D7A19B429DAC /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				80C5E30D9EF4201AB48C9682 /* TypeWhisperPluginSDK */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		F5A108EEA7B6EC3397BE4F44 = {
+			isa = PBXGroup;
+			children = (
+				E22ECFC1C0A6D7A19B429DAC /* Packages */,
+				A48494D6562390297F00CA37 /* Resources */,
+				FCAF52AD77A84E69B2A5A433 /* SarvamPlugin */,
+				7A3855148777F405CB21148B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCAF52AD77A84E69B2A5A433 /* SarvamPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				D5B0CFC077AEE4CFC8C57482 /* SarvamPlugin.swift */,
+			);
+			name = SarvamPlugin;
+			path = Sources/SarvamPlugin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85EEED306974573566787C20 /* SarvamPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58031B15D0B51F90F93EE3CE /* Build configuration list for PBXNativeTarget "SarvamPlugin" */;
+			buildPhases = (
+				D9228B7376AA92AC4ED803E5 /* Sources */,
+				EBE3FB0B62952F18B868B369 /* Resources */,
+				7E04741474C3995B2C60BB60 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SarvamPlugin;
+			packageProductDependencies = (
+				B602B9BF58829B9FE2411365 /* TypeWhisperPluginSDK */,
+			);
+			productName = SarvamPlugin;
+			productReference = 7D7A95AB30FB822EDCF5012E /* SarvamPlugin.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6599CEB7B2B240FFDE8E342F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					85EEED306974573566787C20 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 435291A10CA32E32DA045DCC /* Build configuration list for PBXProject "SarvamPlugin" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F5A108EEA7B6EC3397BE4F44;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A0E6F40BFF88F6C552D819EA /* XCLocalSwiftPackageReference "/Users/rishiraj/Downloads/typewhisper-mac/TypeWhisperPluginSDK" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7A3855148777F405CB21148B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85EEED306974573566787C20 /* SarvamPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBE3FB0B62952F18B868B369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E56655918D2F077B52F77A0 /* manifest.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9228B7376AA92AC4ED803E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E007F1D3A0481190EDFE3CAA /* SarvamPlugin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1795066E512D24683F32EFB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.typewhisper.sarvam;
+				PRODUCT_NAME = SarvamPlugin;
+				SDKROOT = macosx;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		275DA35A31937B63436C2C78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACH_O_TYPE = mh_bundle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.typewhisper.sarvam;
+				PRODUCT_NAME = SarvamPlugin;
+				SDKROOT = macosx;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		7A0DBDBBF5D39DC66193435C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B8134D9AA13C46A9CD0E945D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		435291A10CA32E32DA045DCC /* Build configuration list for PBXProject "SarvamPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8134D9AA13C46A9CD0E945D /* Debug */,
+				7A0DBDBBF5D39DC66193435C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		58031B15D0B51F90F93EE3CE /* Build configuration list for PBXNativeTarget "SarvamPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1795066E512D24683F32EFB7 /* Debug */,
+				275DA35A31937B63436C2C78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A0E6F40BFF88F6C552D819EA /* XCLocalSwiftPackageReference "/Users/rishiraj/Downloads/typewhisper-mac/TypeWhisperPluginSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "/Users/rishiraj/Downloads/typewhisper-mac/TypeWhisperPluginSDK";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B602B9BF58829B9FE2411365 /* TypeWhisperPluginSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TypeWhisperPluginSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6599CEB7B2B240FFDE8E342F /* Project object */;
+}
